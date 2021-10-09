@@ -23,7 +23,7 @@ Team Members:
 
             Lab Section B, Lab 4
             
-            github username: Mohammad0904
+            Github username: Mohammad0904
 
 
 
