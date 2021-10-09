@@ -3,20 +3,29 @@ Team Name: Eclipse
 
 Team Members:
 1.	Itteshaf Haque
+
       Email: itteshaf@my.yorku.ca
+      
       Lecture section: B
+      
       Lab section: B, Lab 3
 
 
+
 2.	Mohammad Sadman Shabab Hossain
+
 Email: sadman31@my.yorku.ca
+
 Lecture section: B
+
 Lab Section B, Lab 4
+
 
 
 Project Title: Short Game
 
 Project Description: 
+
 We will create a rock paper scissor game which will contain images of three hands, rock, paper and scissors. The user can play the game against the server or against another player. Once the user selects the opponent, the game will begin and the user can select any of the three images to play in each round. There will be a total of three rounds. Winner of each round will be decided by the program. The winner of the game will be decided through a best of three process. 
 
 
