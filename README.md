@@ -28,7 +28,7 @@ Project Title: Short Game
 
 Project Description: 
 
-            We will create a rock paper scissor game which will contain images of three hands, rock, paper and scissors. The user can play the game against the server or against another player. Once the user selects the opponent, the game will begin and the user can select any of the three images to play in each round. There will be a total of three rounds. Winner of each round will be decided by the program. The winner of the game will be decided through a best of three process. 
+We will create a rock paper scissor game which will contain images of three hands, rock, paper and scissors. The user can play the game against the server or against another player. Once the user selects the opponent, the game will begin and the user can select any of the three images to play in each round. There will be a total of three rounds. Winner of each round will be decided by the program. The winner of the game will be decided through a best of three process. 
 
 
 Function Requirements:
