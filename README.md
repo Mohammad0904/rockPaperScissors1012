@@ -4,22 +4,22 @@ Team Name: Eclipse
 Team Members:
 1.	Itteshaf Haque
 
-      Email: itteshaf@my.yorku.ca
+            Email: itteshaf@my.yorku.ca
       
-      Lecture section: B
+            Lecture section: B
       
-      Lab section: B, Lab 3
+            Lab section: B, Lab 3
 
 
 
 
 2.	Mohammad Sadman Shabab Hossain
 
-Email: sadman31@my.yorku.ca
+            Email: sadman31@my.yorku.ca
 
-Lecture section: B
+            Lecture section: B
 
-Lab Section B, Lab 4
+            Lab Section B, Lab 4
 
 
 
