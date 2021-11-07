@@ -22,6 +22,7 @@ function player3() {
 //This function alerts the players regarding the rules of the game.
 function rules() {
     alert("Rules: Rock beats scissors but loses to paper. Scissors beat paper but lose to rock. Paper beats rock but loses to scissors. There will be three rounds. Whoever wins 2 rounds wins the game. BEST OF LUCK!!!");
+    document.getElementById("begin").style.display = "inline";
     document.getElementById("wht").style.display = "inline";
 }
 
