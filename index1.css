@@ -2,18 +2,37 @@
     text-align: center;
     margin: 20px auto;
     padding: 50px;
+    color: rgb(20, 220, 87);
     text-align: center;
     font-size: 50px;
-    background-color: bisque;
+    background-color: rgb(207, 209, 188);
     cursor: pointer;
-}
+    border-color: rgb(0, 241, 141);
+    border-width: 20px;
+} 
 
 header > h1 {
-    text-align: center;
-    
+    text-align: center;    
 }
+
+footer {
+    text-align: center;
+    font-size: 30px;
+    border: chartreuse;
+    border-width: 10px;
+    padding-top: 400px;
+}
+
 body {
-    background: darkblue;
+    background: lightskyblue;
     font-size: large;
-    color: aqua;
+    color: rgb(12, 13, 70);
+}
+
+.clickToBegin {
+    text-align: center;
+}
+
+a {
+    color: darkmagenta;
 }
