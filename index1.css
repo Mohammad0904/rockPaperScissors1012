@@ -1,0 +1,19 @@
+#firstButton {
+    text-align: center;
+    margin: 20px auto;
+    padding: 50px;
+    text-align: center;
+    font-size: 50px;
+    background-color: bisque;
+    cursor: pointer;
+}
+
+header > h1 {
+    text-align: center;
+    
+}
+body {
+    background: darkblue;
+    font-size: large;
+    color: aqua;
+}
