@@ -30,3 +30,11 @@ footer {
     font-size: 30px;
     background: cornflowerblue;
 }
+
+#begin {
+    display: none;
+}
+
+#wht {
+    display: none;
+}
