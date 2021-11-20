@@ -23,9 +23,10 @@ function rules() {
 }
 
 function randomSign() {
-    var options = [r, p, s];
+    var options = ["r", "p", "s"];
     var random = Math.floor(Math.random() * 3);
-    return options[random];
+    var ok = parse(options[random])
+    return ok;
 }
 
 function checkUncheck() {
@@ -42,6 +43,26 @@ function checkUncheck() {
 }
 
 function enter() {
+    var result = randomSign();
+    if (document.getElementById("check1").checked==true && result==r) {
+        alert("It is a tie.");
+    } else if (document.getElementById("check1").checked==true && result==s) {
+        alert("You WON!!!");
+    } else if (document.getElementById("check1").checked==true && result==p) {
+        alert("You LOST!!! :( ");
+    } else if (document.getElementById("check2").checked==true && result==r) {
+        alert("You WON!!!");
+    } else if (document.getElementById("check2").checked==true && result==s) {
+        alert("You LOST!!! :( ");
+    } else if (document.getElementById("check2").checked==true && result==p) {
+        alert("It is a tie.");
+    }  else if (document.getElementById("check3").checked==true && result==r) {
+        alert("You LOST!!! :( ");
+    } else if (document.getElementById("check3").checked==true && result==p) {
+        alert("You WON!!!");
+    } else if (document.getElementById("check3").checked==true && result==s) {
+        alert("It is a tie.");
+    }
 
 }
 
