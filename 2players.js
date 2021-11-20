@@ -1,11 +1,7 @@
-//These are the memory spaces for names of players.
-var name1 = 0;
-var name2 = 0;
-var name3 = 0;
 
 //This function stores the name of the first player in PVP mode.
 function player1() {
-    name1 = prompt("Please enter your name: ");
+    var name1 = prompt("Please enter your name: ");
     return name1;
 }
 
@@ -21,11 +17,11 @@ function player3() {
 
 //This function alerts the players regarding the rules of the game.
 function rules() {
-    alert("Rules: Rock beats scissors but loses to paper. Scissors beat paper but lose to rock. Paper beats rock but loses to scissors. There will be three rounds. Whoever wins 2 rounds wins the game. BEST OF LUCK!!!");
+    alert("Rules: \n \n Rock beats scissors but loses to paper. \n \n Scissors beat paper but lose to rock. \n \n Paper beats rock but loses to scissors. \n \n There will be three rounds. \n \n Whoever wins 2 rounds wins the game. \n \n BEST OF LUCK!!!");
     document.getElementById("begin").style.display = "inline";
     document.getElementById("wht").style.display = "inline";
 }
 
 
-document.getElementById("output").innerHTML = name1;
+
 
