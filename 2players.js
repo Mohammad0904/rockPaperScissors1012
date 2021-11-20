@@ -24,44 +24,47 @@ function rules() {
 
 function randomSign() {
     var options = ["r", "p", "s"];
-    var random = Math.floor(Math.random() * 3);
-    var ok = parse(options[random]);
-    return ok;
+    var randomNumber = Math.floor(Math.random() * 3);
+    return options[randomNumber];
 }
 
 function checkUncheck() {
-    if (document.getElementById("check1").checked==true) {
-        document.getElementById("check2").innerHTML = document.getElementById("check2").checked==false;
-        document.getElementById("check3").innerHTML = document.getElementById("check3").checked==false;
-    } else if (document.getElementById("check2").checked==true) {
-        document.getElementById("check1").innerHTML = document.getElementById("check1").checked==false;
-        document.getElementById("check3").innerHTML = document.getElementById("check3").checked==false;
-    } else if (document.getElementById("check3").checked==true) {
-        document.getElementById("check1").innerHTML = document.getElementById("check1").checked==false;
-        document.getElementById("check2").innerHTML = document.getElementById("check2").checked==false;
+    if (document.getElementById("check1").checked == true) {
+        document.getElementById("check2").innerHTML = document.getElementById("check2").checked == false;
+        document.getElementById("check3").innerHTML = document.getElementById("check3").checked == false;
+    } else if (document.getElementById("check2").checked == true) {
+        document.getElementById("check1").innerHTML = document.getElementById("check1").checked == false;
+        document.getElementById("check3").innerHTML = document.getElementById("check3").checked == false;
+    } else if (document.getElementById("check3").checked == true) {
+        document.getElementById("check1").innerHTML = document.getElementById("check1").checked == false;
+        document.getElementById("check2").innerHTML = document.getElementById("check2").checked == false;
     }
 }
 
-function enter() {
-    var result = randomSign(num);
-    if (document.getElementById("check1").checked==true && result=="r") {
-        alert("It is a tie.");
-    } else if (document.getElementById("check1").checked==true && result=="s") {
+function playButton() {
+    var result = randomSign();
+    if (document.getElementById("check1").checked == true && result == "r") {
+        alert("It is a TIE!!!!");
+    } else if (document.getElementById("check1").checked == true && result == "s") {
         alert("You WON!!!");
-    } else if (document.getElementById("check1").checked==true && result=="p") {
+    } else if (document.getElementById("check1").checked == true && result == "p") {
         alert("You LOST!!! :( ");
-    } else if (document.getElementById("check2").checked==true && result==r) {
+    }
+
+    if (document.getElementById("check2").checked == true && result == "r") {
         alert("You WON!!!");
-    } else if (document.getElementById("check2").checked==true && result==s) {
+    } else if (document.getElementById("check2").checked == true && result == "s") {
         alert("You LOST!!! :( ");
-    } else if (document.getElementById("check2").checked==true && result==p) {
-        alert("It is a tie.");
-    }  else if (document.getElementById("check3").checked==true && result==r) {
+    } else if (document.getElementById("check2").checked == true && result == "p") {
+        alert("It is a TIE!!!");
+    }
+
+    if (document.getElementById("check3").checked == true && result == "r") {
         alert("You LOST!!! :( ");
-    } else if (document.getElementById("check3").checked==true && result==p) {
+    } else if (document.getElementById("check3").checked == true && result == "p") {
         alert("You WON!!!");
-    } else if (document.getElementById("check3").checked==true && result==s) {
-        alert("It is a tie.");
+    } else if (document.getElementById("check3").checked == true && result == "s") {
+        alert("It is a TIE!!!");
     }
 
 }
