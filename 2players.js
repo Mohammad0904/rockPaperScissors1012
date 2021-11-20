@@ -7,12 +7,13 @@ function player1() {
 
 //This function stores the name of the second player in PVP mode.
 function player2() {
-    name2 = prompt("Please enter your name: ");
+    var name2 = prompt("Please enter your name: ");
 }
 
 //This function stores the name of the player in PVC mode.
-function player3() {
-    name3 = prompt("Please enter your name: ")
+window.onload = function player3() {
+    var name3 = prompt("Please enter your name: ");
+    document.getElementById("welcomePlayer3").innerHTML = name3;
 }
 
 //This function alerts the players regarding the rules of the game.
@@ -22,12 +23,14 @@ function rules() {
     document.getElementById("wht").style.display = "inline";
 }
 
+// This function generates a random sign for the computer.
 function randomSign() {
     var options = ["r", "p", "s"];
     var randomNumber = Math.floor(Math.random() * 3);
     return options[randomNumber];
 }
 
+// This function ensures that only one of the checkboxes is checked.
 function checkUncheck() {
     if (document.getElementById("check1").checked == true) {
         document.getElementById("check2").innerHTML = document.getElementById("check2").checked == false;
@@ -41,6 +44,7 @@ function checkUncheck() {
     }
 }
 
+// This function assesses the outcome between player and computer.
 function playButton() {
     var result = randomSign();
     if (document.getElementById("check1").checked == true && result == "r") {
