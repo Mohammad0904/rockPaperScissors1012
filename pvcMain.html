@@ -1,21 +1,40 @@
 <!DOCTYPE html>
 <html lang="En">
 <!-- Mohammad Sadman Shabab Hossain 
-This is copyrighted by Mohammad Sadman Shabab Hossain as Lab 06 of EECS 1012 course of York University.-->    
+This is copyrighted by Mohammad Sadman Shabab Hossain as Lab 06 of EECS 1012 course of York University.-->
+
 <head>
   <meta charset="UTF-8">
   <title>Lab 06</title>
   <link rel="stylesheet" type="text/css" href="index2.css" title="style" />
-  <script src ="https://ajax.googleapis.com/ajax/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/jquery/3.3.1/jquery.min.js"></script>
   <script src="2players.js"></script>
 </head>
+
 <body>
 
-<p></p>
+  <header>Rock, Paper, Scissors Game</header>
+
+  <div id="rock">
+    <input id="check1" type="checkbox" onclick="checkUncheck()"> Rock
+    <img id="gameImage" src="images/rock.png" alt="It's ROCK!" />
+  </div>
+
+  <div id="paper">
+    <input id="check2" type="checkbox" onclick="checkUncheck()"> Paper
+    <img id="gameImage" src="images/paper.png" alt="It's PAPER!" />
+  </div>
+
+  <div id="scissors">
+    <input id="check3" type="checkbox" onclick="checkUncheck()"> Scissors
+    <img id="gameImage" src="images/scissors.png" alt="It's SCISSORS!!" />
+  </div>
+
+  <div id="enter">
+    <button id="enterButton" onclick="enter()">Enter</button>
+  </div>
 
 
-
-
-
+  <footer>Made By: Mohammad Sadman Shabab Hossain & Itteshaf Haque</footer>
 
 </body>

@@ -8,6 +8,16 @@ h2 {
     font-size: 50px;
 }
 
+header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background-color: rgb(29, 5, 48);
+    color: seashell;
+    font-size: 20px;
+    text-align: center;
+}
 
 footer {
     position: fixed;
@@ -35,6 +45,52 @@ footer {
     display: none;
 }
 
-#wht {
-    display: none;
+#gameImage {
+    height: 100px;
+    padding-top: 20px;
 }
+
+#enter {
+    padding-top: 10px;
+    text-align: center;
+}
+
+#enterButton {
+    border-style: inset;
+    border-width: 10px;
+    font-size: 40px;
+    color: cadetblue;
+}
+
+#scissors {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    border-style: double;
+    border-width: 10px;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    margin-right: 50%;
+}
+
+ #paper {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    border-style: double;
+    border-width: 10px;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    margin-right: 50%
+}
+
+#rock {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 30px;    
+    border-style: double;
+    border-width: 10px;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    margin-right: 50%
+} 

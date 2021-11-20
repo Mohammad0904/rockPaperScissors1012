@@ -22,6 +22,26 @@ function rules() {
     document.getElementById("wht").style.display = "inline";
 }
 
+function randomSign() {
+    var options = [r, p, s];
+    var random = Math.floor(Math.random() * 3);
+    return options[random];
+}
 
+function checkUncheck() {
+    if (document.getElementById("check1").checked==true) {
+        document.getElementById("check2").innerHTML = document.getElementById("check2").checked==false;
+        document.getElementById("check3").innerHTML = document.getElementById("check3").checked==false;
+    } else if (document.getElementById("check2").checked==true) {
+        document.getElementById("check1").innerHTML = document.getElementById("check1").checked==false;
+        document.getElementById("check3").innerHTML = document.getElementById("check3").checked==false;
+    } else if (document.getElementById("check3").checked==true) {
+        document.getElementById("check1").innerHTML = document.getElementById("check1").checked==false;
+        document.getElementById("check2").innerHTML = document.getElementById("check2").checked==false;
+    }
+}
 
+function enter() {
+
+}
 
