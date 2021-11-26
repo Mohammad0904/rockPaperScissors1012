@@ -1,3 +1,6 @@
+var url = "http://localhost:2500/post";
+var myName;
+
 
 //This function stores the name of the first player in PVP mode.
 function player1() {
@@ -46,7 +49,10 @@ function checkUncheck() {
 
 // This function assesses the outcome between player and computer.
 function playButton() {
-    var result = randomSign();
+
+    var playerChoice = 0;
+
+    /*        var result = randomSign();
     if (document.getElementById("check1").checked == true && result == "r") {
         alert("It is a TIE!!!!");
     } else if (document.getElementById("check1").checked == true && result == "s") {
@@ -69,7 +75,32 @@ function playButton() {
         alert("You WON!!!");
     } else if (document.getElementById("check3").checked == true && result == "s") {
         alert("It is a TIE!!!");
-    }
+    }       */
 
+
+    if (document.getElementById("check1").checked == true) {
+        playerChoice = "r";
+    }  
+    else if (document.getElementById("check2").checked == true) {
+        playerChoice = "p";
+    }
+    else if (document.getElementById("check3").checked == true) {
+        playerChoice = "s";
+    }
+    $.post(url+'?data='+JSON.stringify({
+        'name': myName,
+        'playerChoice' : 'playerChoice', 
+        'action' : 'evaluate'})); response
+}
+
+function response (data, status) {
+    var response = JSON.parse(data);
+    console.log(data);
+    if (response['action'] == 'evaluate') {
+        var win = response['win'];
+        if (win == true) {
+            alert("You won");
+        } else {alert("You lost")};
+    }
 }
 

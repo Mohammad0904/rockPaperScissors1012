@@ -14,20 +14,21 @@
 
   <header>Rock, Paper, Scissors Game</header>
 
+  <form action="/action_page.php">
   <div id="rock">
-    <input id="check1" type="checkbox" onclick="checkUncheck()"> Rock
+    <input id="check1" type="radio" name="selection" value="rock"> Rock
     <img id="gameImage" src="images/rock.png" alt="It's ROCK!" />
   </div>
 
   <div id="paper">
-    <input id="check2" type="checkbox" onclick="checkUncheck()"> Paper
+    <input id="check2" type="radio" name="selection" value="paper"> Paper
     <img id="gameImage" src="images/paper.png" alt="It's PAPER!" />
   </div>
 
   <div id="scissors">
-    <input id="check3" type="checkbox" onclick="checkUncheck()"> Scissors
+    <input id="check3" type="radio" name="selection" value="scissors"> Scissors
     <img id="gameImage" src="images/scissors.png" alt="It's SCISSORS!!" />
-  </div>
+  </div> </form>
 
   <div id="enter">
     <button id="enterButton" onclick="playButton()">Enter</button>
