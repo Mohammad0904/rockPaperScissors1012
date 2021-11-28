@@ -21,16 +21,16 @@ app.post('/post', (req, res) => {
     }
 
     else if (z['action' == "evaluate"]) {
-        evaluate(z['generateSymbol'], z['playerChoice']);
-
+       // evaluate(z['generateSymbol'], z['playerChoice']);
+        var getit = generateSymbol();
         var win = false;
-        if (z['playerChoice'] == "r" && z['generateSymbol'] == "s") {
+        if (z['playerChoice'] == "r" && getit == "s") {
             win = true;
         }
-        else if (z['playerChoice'] == "p" && z['generateSymbol'] == "r") {
+        else if (z['playerChoice'] == "p" && getit == "r") {
             win = true;
         }
-        else if (z['playerChoice'] == "s" && z['generateSymbol'] == "p") {
+        else if (z['playerChoice'] == "s" && getit == "p") {
             win = true;
         }
         else win = false;
@@ -57,7 +57,7 @@ function generateSymbol() {
 }
 
 
-function evaluate(symbol, playerChoice) {
+/* function evaluate(symbol, playerChoice) {
     var win = false;
     if (symbol == "r" && playerChoice == "r") {
         win = false;
@@ -86,4 +86,4 @@ function evaluate(symbol, playerChoice) {
     else if (symbol == "s" && playerChoice == "s") {
         win = false;
     } return win
-}
+} */
