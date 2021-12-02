@@ -90,7 +90,8 @@ function playButton() {
     $.post(url+'?data='+JSON.stringify({
         'name': myName,
         'playerChoice' : 'playerChoice', 
-        'action' : 'evaluate'})); response
+        'action' : 'evaluate'}),
+        response );
 }
 
 function response (data, status) {
