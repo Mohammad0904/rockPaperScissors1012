@@ -14,7 +14,9 @@
 
     <header>Rock, Paper, Scissors Game</header>
 
-    <form action="/action_page.php">
+    <div id="mainDiv">
+        <p id="player1heading"><strong>Player 1 choice</strong></p>
+        <form action="/action_page.php">
         <div id="rock1">
             <input id="check1" type="radio" name="selection" value="rock"> Rock
             <img id="gameImage" src="images/rock.png" alt="It's ROCK!" />
@@ -29,9 +31,12 @@
             <input id="check3" type="radio" name="selection" value="scissors"> Scissors
             <img id="gameImage" src="images/scissors.png" alt="It's SCISSORS!!" />
         </div>
+        
+        
     </form>
-
+    <p id="player2heading"><strong>Player 2 choice</strong></p>
     <form action="/action_page.php">
+        
         <div id="rock2">
             <input id="check1" type="radio" name="selection" value="rock"> Rock
             <img id="gameImage" src="images/rock.png" alt="It's ROCK!" />
@@ -46,7 +51,8 @@
             <input id="check3" type="radio" name="selection" value="scissors"> Scissors
             <img id="gameImage" src="images/scissors.png" alt="It's SCISSORS!!" />
         </div>
-    </form>
+        
+    </form></div>
 
     <div id="enter">
         <button id="enterButton" onclick="playButton()">Enter</button>
