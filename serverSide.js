@@ -11,17 +11,7 @@ app.post('/post', (req, res) => {
     console.log(JSON.parse(req.query['data']));
     var z = JSON.parse(req.query['data']);
 
-    if (z['action'] == "generateSymbol") {
-        generateSymbol();
-        var jsontext = JSON.stringify({
-            'action': 'generateSymbol',
-            'msg': 'New Symbol Generated!'
-        });
-        console.log(jsontext);
-        console.log(symbol);
-    }
-
-    else if (z['action' == "evaluate"]) {
+ if (z['action' == "evaluate"]) {
 
         var compChoice = generateSymbol();
 
@@ -43,6 +33,35 @@ app.post('/post', (req, res) => {
         console.log(jsontext);
         res.send(jsontext);
     }
+
+    else if (z['action' == 'evaluatePVP']) {
+        if (z[player1Choice] == 'r' && z[player2Choice] == 'p') {
+            winP2 = true;
+        }
+        else if (z[player1Choice] == 'r' && z[player2Choice] == 's') {
+            winP1 = true;
+        }
+        else if (z[player1Choice] == 'p' && z[player2Choice] == 'r') {
+            winP1 = true;
+        }
+        else if (z[player1Choice] == 'p' && z[player2Choice] == 's') {
+            winP2 = true;
+        }
+        else if (z[player1Choice] == 's' && z[player2Choice] == 'r') {
+            winP2 = true;
+        }
+        else if (z[player1Choice] == 's' && z[player2Choice] == 'p') {
+            winP1 = true;
+        }
+        var jsontext = JSON.stringify({
+            'action': 'evaluate',
+            'winP1': winP1,
+            'winP2' : winP2,
+        });
+        console.log(jsontext);
+        res.send(jsontext);
+    }
+
     else {
         res.send(JSON.stringify({ 'msg': 'error!!!' }));
     }
