@@ -1,8 +1,9 @@
 var express = require('express');
 var app = express();
-var symbol = {};
 var idCounter = 0;
 var win = false;
+var winP1 = false;
+var winP2 = false;
 
 app.post('/post', (req, res) => {
     res.header("Access-Control-Allow-Origin", "*");
