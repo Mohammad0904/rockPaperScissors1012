@@ -89,7 +89,7 @@ function playButton() {
     }
     $.post(url+'?data='+JSON.stringify({
         'name': myName,
-        'playerChoice' : 'playerChoice', 
+        'playerChoice' : playerChoice, 
         'action' : 'evaluate'}),
         response );
 }
