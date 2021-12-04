@@ -80,28 +80,74 @@ function playButton() {
 
     if (document.getElementById("check1").checked == true) {
         playerChoice = "r";
-    }  
+    }
     else if (document.getElementById("check2").checked == true) {
         playerChoice = "p";
     }
     else if (document.getElementById("check3").checked == true) {
         playerChoice = "s";
     }
-    $.post(url+'?data='+JSON.stringify({
+    $.post(url + '?data=' + JSON.stringify({
         'name': myName,
-        'playerChoice' : playerChoice, 
-        'action' : 'evaluate'}),
-        response );
+        'playerChoice': playerChoice,
+        'action': 'evaluate'
+    }),
+        response);
 }
 
-function response (data, status) {
+function twoPlayButton() {
+    var player1Choice = 0;
+    var player2Choice = 0;
+
+    if (document.getElementById("p1check1").checked == true) {
+        player1Choice = "r";
+    }
+    else if (document.getElementById("p1check2").checked == true) {
+        player1Choice = "p";
+    }
+    else if (document.getElementById("p1check3").checked == true) {
+        player1Choice = "s";
+    }
+
+    if (document.getElementById("p2check1").checked == true) {
+        player2Choice = "r";
+    }
+    else if (document.getElementById("p2check2").checked == true) {
+        player2Choice = "p";
+    }
+    else if (document.getElementById("p2check3").checked == true) {
+        player2Choice = "s";
+    }
+    $.post(url + '?data=' + JSON.stringify({
+        'player1Choice' : player1Choice,
+        'player2Choice' : player2Choice,
+        'action' : 'evaluatePVP'
+    }),
+    response);
+}
+
+function response(data, status) {
     var response = JSON.parse(data);
     console.log(data);
     if (response['action'] == 'evaluate') {
         var win = response['win'];
         if (win == true) {
             alert("You won");
-        } else {alert("You lost")};
+        } else { alert("You lost") };
+    }
+
+    if (response['action'] == 'evaluatePVP') {
+        var winP1 = response['winP1']
+        var winP2 = response['winP2']
+        if (winP1 == true) {
+            alert("Player 1 won this round!")
+        }
+        else if (winP2 == true) {
+            alert("Player 2 won this round!")
+        }
+        else if (winP1 == false && winP2 == false) {
+            alert("It is a tie! ")
+        }
     }
 }
 

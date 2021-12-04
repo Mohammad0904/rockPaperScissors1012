@@ -54,7 +54,7 @@ app.post('/post', (req, res) => {
             winP1 = true;
         }
         var jsontext = JSON.stringify({
-            'action': 'evaluate',
+            'action': 'evaluatePVP',
             'winP1': winP1,
             'winP2' : winP2,
         });
