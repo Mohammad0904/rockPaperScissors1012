@@ -2,6 +2,7 @@ var express = require('express');
 var app = express();
 var symbol = {};
 var idCounter = 0;
+var win = false;
 
 app.post('/post', (req, res) => {
     res.header("Access-Control-Allow-Origin", "*");
@@ -21,16 +22,16 @@ app.post('/post', (req, res) => {
     }
 
     else if (z['action' == "evaluate"]) {
-       // evaluate(z['generateSymbol'], z['playerChoice']);
-        var getit = generateSymbol();
-        var win = false;
-        if (z['playerChoice'] == "r" && getit == "s") {
+
+        var compChoice = generateSymbol();
+
+        if (z[playerChoice] == 'r' && compChoice == 's') {
             win = true;
         }
-        else if (z['playerChoice'] == "p" && getit == "r") {
+        else if (z[playerChoice] == 'p' && compChoice == 'r') {
             win = true;
         }
-        else if (z['playerChoice'] == "s" && getit == "p") {
+        else if (z[playerChoice] == 's' && compChoice == 'p') {
             win = true;
         }
         else win = false;
@@ -51,9 +52,9 @@ console.log("Server is running!");
 
 
 function generateSymbol() {
-    var symbols = ["r", "p", "s"];
+    var symbols = ['r', 'p', 's'];
     var newSymbol = symbols[Math.floor((Math.random) * 3)];
-    symbol = newSymbol;
+    return newSymbol;
 }
 
 
