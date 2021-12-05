@@ -25,26 +25,6 @@ function rules() {
     document.getElementById("wht").style.display = "inline";
 }
 
-// This function generates a random sign for the computer.
-function randomSign() {
-    var options = ["r", "p", "s"];
-    var randomNumber = Math.floor(Math.random() * 3);
-    return options[randomNumber];
-}
-
-// This function ensures that only one of the checkboxes is checked.
-function checkUncheck() {
-    if (document.getElementById("check1").checked == true) {
-        document.getElementById("check2").innerHTML = document.getElementById("check2").checked == false;
-        document.getElementById("check3").innerHTML = document.getElementById("check3").checked == false;
-    } else if (document.getElementById("check2").checked == true) {
-        document.getElementById("check1").innerHTML = document.getElementById("check1").checked == false;
-        document.getElementById("check3").innerHTML = document.getElementById("check3").checked == false;
-    } else if (document.getElementById("check3").checked == true) {
-        document.getElementById("check1").innerHTML = document.getElementById("check1").checked == false;
-        document.getElementById("check2").innerHTML = document.getElementById("check2").checked == false;
-    }
-}
 
 // This function posts the selected option of the player in PVC mode and receives the response from server.
 function playButton() {
@@ -61,7 +41,6 @@ function playButton() {
         playerChoice = "s";
     }
     $.post(url + '?data=' + JSON.stringify({
-        'name': myName,
         'playerChoice': playerChoice,
         'action': 'evaluate'
     }),
