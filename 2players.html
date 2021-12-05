@@ -1,27 +1,33 @@
 <!DOCTYPE html>
 <html lang="En">
- 
+
 <head>
   <meta charset="UTF-8">
   <title>Rock, Paper, Scissors</title>
   <link rel="stylesheet" type="text/css" href="index2.css" title="style" />
-  <script src ="https://ajax.googleapis.com/ajax/jquery/3.3.1/jquery.min.js"></script>
-  <script src="2players.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/jquery/3.3.1/jquery.min.js"></script>
+  <script src="clientSide.js"></script>
 </head>
+
 <body>
 
-  <p>Please enter your names:</p> 
-  <button onclick="player1()">Player 1</button>  <button onclick="player(2)">Player 2</button>
+  <p>Please enter your names:</p>
+  <button onclick="player1()">Player 1 Click Here!</button> <button onclick="player2()">Player 2 Click Here!</button>
 
   <button id="rules" onclick="rules()">Rules</button>
-  <button id="begin"><a id="wht" href="PVP.html">BEGIN!</a></button>
+  <button id="begin"><a id="wht" href="pvpMain.html">BEGIN!</a></button>
 
   <p id="note">Note: Read the rules in order to continue.</p>
-  
+
+  <div>
+    <p>Welcome <span id="welcomePlayer1"> Player 1 </span> and <span id="welcomePlayer2"> Player 2 </span></p>
+  </div>
+
 
 
   <footer>Made by: Mohammad & Itteshaf</footer>
 
 
 </body>
+
 </html>

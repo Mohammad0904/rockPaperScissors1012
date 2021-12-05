@@ -1,20 +1,19 @@
 var url = "http://localhost:2500/post";
-var myName;
-
 
 //This function stores the name of the first player in PVP mode.
 function player1() {
     var name1 = prompt("Please enter your name: ");
-    return name1;
+    document.getElementById("welcomePlayer1").innerHTML = name1;
 }
 
 //This function stores the name of the second player in PVP mode.
 function player2() {
     var name2 = prompt("Please enter your name: ");
+    document.getElementById("welcomePlayer2").innerHTML = name2;
 }
 
 //This function stores the name of the player in PVC mode.
-window.onload = function player3() {
+function player3() {
     var name3 = prompt("Please enter your name: ");
     document.getElementById("welcomePlayer3").innerHTML = name3;
 }
