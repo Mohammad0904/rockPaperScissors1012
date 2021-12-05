@@ -47,36 +47,10 @@ function checkUncheck() {
     }
 }
 
-// This function assesses the outcome between player and computer.
+// This function posts the selected option of the player in PVC mode and receives the response from server.
 function playButton() {
 
     var playerChoice = 0;
-
-    /*        var result = randomSign();
-    if (document.getElementById("check1").checked == true && result == "r") {
-        alert("It is a TIE!!!!");
-    } else if (document.getElementById("check1").checked == true && result == "s") {
-        alert("You WON!!!");
-    } else if (document.getElementById("check1").checked == true && result == "p") {
-        alert("You LOST!!! :( ");
-    }
-
-    if (document.getElementById("check2").checked == true && result == "r") {
-        alert("You WON!!!");
-    } else if (document.getElementById("check2").checked == true && result == "s") {
-        alert("You LOST!!! :( ");
-    } else if (document.getElementById("check2").checked == true && result == "p") {
-        alert("It is a TIE!!!");
-    }
-
-    if (document.getElementById("check3").checked == true && result == "r") {
-        alert("You LOST!!! :( ");
-    } else if (document.getElementById("check3").checked == true && result == "p") {
-        alert("You WON!!!");
-    } else if (document.getElementById("check3").checked == true && result == "s") {
-        alert("It is a TIE!!!");
-    }       */
-
 
     if (document.getElementById("check1").checked == true) {
         playerChoice = "r";
@@ -95,6 +69,7 @@ function playButton() {
         response);
 }
 
+// This function posts the selected options of the two players in PVP mode and receives the response from server.
 function twoPlayButton() {
     var player1Choice = 0;
     var player2Choice = 0;
@@ -126,6 +101,7 @@ function twoPlayButton() {
     response);
 }
 
+// This function receives the response from the server.
 function response(data, status) {
     var response = JSON.parse(data);
     console.log(data);

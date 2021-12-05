@@ -12,7 +12,8 @@ app.post('/post', (req, res) => {
     console.log(JSON.parse(req.query['data']));
     var z = JSON.parse(req.query['data']);
 
- if (z['action' == "evaluate"]) {
+    //This part evalutes the player's choice and the computer's choice in PVC mode.
+    if (z['action' == "evaluate"]) {
 
         var compChoice = generateSymbol();
 
@@ -35,6 +36,7 @@ app.post('/post', (req, res) => {
         res.send(jsontext);
     }
 
+    // This part evaluates the winner among the two players of PVP mode.
     else if (z['action' == 'evaluatePVP']) {
         if (z[player1Choice] == 'r' && z[player2Choice] == 'p') {
             winP2 = true;
@@ -57,7 +59,7 @@ app.post('/post', (req, res) => {
         var jsontext = JSON.stringify({
             'action': 'evaluatePVP',
             'winP1': winP1,
-            'winP2' : winP2,
+            'winP2': winP2,
         });
         console.log(jsontext);
         res.send(jsontext);
@@ -70,41 +72,10 @@ app.post('/post', (req, res) => {
 }).listen(2500);
 console.log("Server is running!");
 
-
+// This function generates a random symbol for the computer.
 function generateSymbol() {
     var symbols = ['r', 'p', 's'];
     var newSymbol = symbols[Math.floor((Math.random) * 3)];
     return newSymbol;
 }
 
-
-/* function evaluate(symbol, playerChoice) {
-    var win = false;
-    if (symbol == "r" && playerChoice == "r") {
-        win = false;
-    }
-    else if (symbol == "r" && playerChoice == "p") {
-        win = true;
-    }
-    else if (symbol == "r" && playerChoice == "s") {
-        win = false;
-    }
-    else if (symbol == "p" && playerChoice == "r") {
-        win = false;
-    }
-    else if (symbol == "p" && playerChoice == "p") {
-        win = false;
-    }
-    else if (symbol == "p" && playerChoice == "s") {
-        win = true;
-    }
-    else if (symbol == "s" && playerChoice == "r") {
-        win = true;
-    }
-    else if (symbol == "s" && playerChoice == "p") {
-        win = false;
-    }
-    else if (symbol == "s" && playerChoice == "s") {
-        win = false;
-    } return win
-} */
